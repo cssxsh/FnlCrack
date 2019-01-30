@@ -3,8 +3,6 @@ package cssxsh.fnlfont.FreeType;
 import com.sun.jna.*;
 import com.sun.jna.ptr.*;
 
-import java.nio.Buffer;
-import java.nio.ByteBuffer;
 import java.util.*;
 
 public class FreeTypeLIb {
@@ -66,13 +64,24 @@ public class FreeTypeLIb {
         }
 
         public static class FT_CharMapRec extends Structure {
-            public FT_FaceRec.ByReference face;
             public int encoding;
             public short platform_id;
             public short encoding_id;
 
             public static class ByReference extends FT_Bitmap_Size implements Structure.ByReference { }
             public static class ByValue extends FT_Bitmap_Size implements Structure.ByValue { }
+            public static class P_CharMap extends Structure {
+                public FT_CharMapRec.ByReference value;
+
+                public static class ByReference extends P_CharMap implements Structure.ByReference { }
+
+                @Override
+                protected List<String> getFieldOrder() {
+                    List<String> Field = new ArrayList<String>();
+                    Field.add("value");
+                    return Field;
+                }
+            }
 
             @Override
             protected List<String> getFieldOrder() {
@@ -88,34 +97,49 @@ public class FreeTypeLIb {
         public static class FT_FaceRec extends Structure {
             public NativeLong num_faces;
             public NativeLong face_index;
+
             public NativeLong face_flags;
             public NativeLong style_flags;
+
             public NativeLong num_glyphs;
+
             public String family_name;
             public String style_name;
+
             public int num_fixed_sizes;
             public FT_Bitmap_Size.ByReference available_sizes;
+
             public int num_charmaps;
-            public FT_CharMapRec.ByReference charmaps;
+            public Pointer charmaps;
+
             public FT_Generic.ByValue generic;
+
             public FT_BBox.ByValue bbox;
+
             public short units_per_EM;
             public short ascender;
             public short descender;
             public short height;
+
             public short max_advance_width;
             public short max_advance_height;
+
             public short underline_position;
             public short underline_thickness;
+
             public FT_GlyphSlotRec.ByReference glyph;
-            public Pointer size;
-            public Pointer charmap;
+            public FT_SizeRec.ByReference size;
+            public FT_CharMapRec.ByReference charmap;
+
             public FT_DriverRec.ByReference driver;
             public Pointer memory_;
             public Pointer stream;
+
             public FT_ListRec.ByValue sizes_list;
+
             public FT_Generic.ByValue autohint;
             public Pointer extensions;
+
             public Pointer internal;
 
             public static class ByReference extends FT_FaceRec implements Structure.ByReference { }
@@ -185,30 +209,51 @@ public class FreeTypeLIb {
 
             public static class ByReference extends FT_Size_Metrics implements Structure.ByReference { }
             public static class ByValue extends FT_Size_Metrics implements Structure.ByValue { }
+
+            @Override
+            protected List<String> getFieldOrder() {
+                List<String> Field = new ArrayList<String>();
+                Field.add("x_ppem");
+                Field.add("y_ppem");
+                Field.add("x_scale");
+                Field.add("y_scale");
+                Field.add("ascender");
+                Field.add("descender");
+                Field.add("height");
+                Field.add("max_advance");
+                return Field;
+            }
         }
 
         public static class FT_SizeRec extends Structure {
             public FT_FaceRec.ByReference face;
             public FT_Generic.ByValue generic;
-            public FT_Size_Metrics metrics;
+            public FT_Size_Metrics.ByValue metrics;
             public Pointer internal;
             //public FT_Size_InternalRec.ByReference internal;
 
             public static class ByReference extends FT_SizeRec implements Structure.ByReference { }
             public static class ByValue extends FT_SizeRec implements Structure.ByValue { }
+
+            @Override
+            protected List<String> getFieldOrder() {
+                List<String> Field = new ArrayList<String>();
+                Field.add("face");
+                Field.add("generic");
+                Field.add("metrics");
+                Field.add("internal");
+                return Field;
+            }
         }
 
         public static class FT_GlyphSlotRec extends Structure {
             public Pointer library;
-            //public FT_FaceRec.ByReference face;
             public Pointer face;
-            //public FT_GlyphSlotRec.ByReference next;
             public Pointer next;
             public int reserved;
             public FT_Generic.ByValue generic;
 
-            //public FT_Glyph_Metrics.ByValue metrics;
-            public NativeLong[] metrics = new NativeLong[8];
+            public FT_Glyph_Metrics.ByValue metrics;
             public NativeLong linearHoriAdvance;
             public NativeLong linearVertAdvance;
             public FT_Vector.ByValue advance;
@@ -299,9 +344,11 @@ public class FreeTypeLIb {
         public static class FT_Outline extends Structure {
             public short n_contours;
             public short n_points;
+
             public FT_Vector.ByReference points;
-            public String tags;
+            public ByteByReference tags;
             public ShortByReference contours;
+
             public int flags;
 
             public static class ByReference extends FT_Outline implements Structure.ByReference { }
@@ -423,6 +470,7 @@ public class FreeTypeLIb {
                 return Field;
             }
         }
+
 
         public void FT_Library_Version (Pointer library, IntByReference aMajor, IntByReference aMinor, IntByReference aPatch);
 

@@ -6,12 +6,19 @@ import cssxsh.fnlfont.FontPack.FnlFont;
 
 public class Main {
     public static void main (String[] args) {
-        //FnlFont rance01fnl = new FnlFont(".\\src\\main\\resources\\Rance01Font.fnl");
+        FnlFlieTest();
+    }
+
+    private static void FnlFlieTest () {
+        FnlFont rance01fnl = new FnlFont(".\\REC\\Rance01Font.fnl");
         //rance01fnl.Load();
+    }
+
+    private static void FreeTypeTest () {
         System.out.println(Tools.getFreeTypeVersion());
         long index = 0;
         int error = 0;
-        int fontSize = 0x0180;
+        int fontSize = 0x0088;
         PointerByReference aLib = new PointerByReference();
         FreeType.FT_FaceRec.ByReference.P_Face pFace = new FreeType.FT_FaceRec.ByReference.P_Face();
         error = FreeType.dll.FT_Init_FreeType(aLib);
@@ -24,12 +31,7 @@ public class Main {
         //error = FreeType.dll.FT_Set_Char_Size(pFace.value, fontSize << 6, fontSize << 6, 0x48, 0x48);
         System.out.println("FT_Set_Char_Size error:" + error);
 
-        pFace.write();
-        pFace.writeField("value");
-        pFace.value.glyph.write();
-        pFace.value.driver.write();
-        pFace.value.driver.root.write();
-        error = FreeType.dll.FT_Load_Char(pFace.value, 0x0037, 0x00);
+        error = FreeType.dll.FT_Load_Char(pFace.value, 0x0040, 0x00);
         System.out.println("FT_Load_Char error:" + error);
 
         /*
@@ -42,10 +44,7 @@ public class Main {
 
         //error = FreeType.dll.FT_Render_Glyph_Internal (pFace.value.driver.root.library, pFace.value, 0x02);
         //System.out.println("FT_Render_Glyph_Internal" + error);
-        pFace.value.glyph.bitmap.write();
-        pFace.value.glyph.write();
         error = FreeType.dll.FT_Render_Glyph(pFace.value.glyph, 0x02);
-        System.out.println(aLib.getValue() +  " " + pFace.value.driver.root.library);
         System.out.println("FT_Render_Glyph error:" + error);
 
         int length = pFace.value.glyph.bitmap.pitch * pFace.value.glyph.bitmap.rows;

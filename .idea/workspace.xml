@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b40c0ade-1835-44cf-88ac-c5950e3afbd9" name="Default Changelist" comment="" />
+    <list default="true" id="b40c0ade-1835-44cf-88ac-c5950e3afbd9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FontDataByType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REC/test.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/REC/test.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FnlFont.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FnlFont.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FontDatasBySize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FontDatasBySize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FreeType/FreeTypeLIb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FreeType/FreeTypeLIb.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +23,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/ByteTools/Tools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
+            <state relative-caret-position="479">
               <caret line="180" column="25" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -37,38 +46,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FreeType/FreeTypeLIb.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FontDatasBySize.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1520">
-              <caret line="376" column="19" selection-start-line="376" selection-start-column="19" selection-end-line="376" selection-end-column="19" />
+            <state relative-caret-position="380">
+              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="class#FT_Glyph_Metrics#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#FT_Bitmap_Size#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#FT_CharMapRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#P_Face#0;class#FT_FaceRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="method#getFieldOrder#0;class#FT_FaceRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#FT_Size_Metrics#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#FT_SizeRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#FT_GlyphSlotRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="method#getFieldOrder#0;class#FT_GlyphSlotRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#FT_Bitmap#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#FT_Outline#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#FT_Vector#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#FT_Generic#0;class#FreeType#0;class#FreeTypeLIb#0" />
-                <element signature="class#FT_BBox#0;class#FreeType#0;class#FreeTypeLIb#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#FontDatasBySize#0;class#FontDatasBySize#0" />
+                <element signature="method#setData#0;class#FontDatasBySize#0" />
               </folding>
             </state>
           </provider>
@@ -77,14 +61,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FnlFont.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
+            <state relative-caret-position="346">
+              <caret line="242" column="8" lean-forward="true" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="8" />
               <folding>
                 <element signature="method#FnlFont#0;class#FnlFont#0" />
                 <element signature="method#Load#0;class#FnlFont#0" />
-                <element signature="method#OutputBinFile#0;class#FnlFont#0" />
                 <element signature="method#OutputBinFile#1;class#FnlFont#0" />
                 <element signature="method#OutputBinFile#2;class#FnlFont#0" />
+                <element signature="method#OutInfo#0;class#FnlFont#0" />
                 <element signature="method#getFontData#0;class#FnlFont#0" />
                 <element signature="method#getDatasBySize#0;class#FnlFont#0" />
                 <element signature="method#AnalyseTable#0;class#FnlFont#0" />
@@ -94,16 +78,57 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="method#FreeTypeTest#0;class#Main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>rec</find>
+      <find>d</find>
+      <find>reco</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FreeType/FreeTypeLIb.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FontDataByType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FontDatasBySize.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FnlFont.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="445" />
-    <option name="y" value="130" />
+    <option name="x" value="237" />
+    <option name="y" value="352" />
     <option name="width" value="1470" />
-    <option name="height" value="880" />
+    <option name="height" value="863" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -111,8 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,14 +143,69 @@
               <item name="FnlCrack" type="b2602c69:ProjectViewProjectNode" />
               <item name="FnlCrack" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FnlCrack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FnlCrack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FnlCrack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FnlCrack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FnlCrack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FnlCrack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FnlCrack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FnlCrack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fnlfont" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FnlCrack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FnlCrack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fnlfont" type="462c0819:PsiDirectoryNode" />
+              <item name="ByteTools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FnlCrack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FnlCrack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fnlfont" type="462c0819:PsiDirectoryNode" />
+              <item name="FontPack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FnlCrack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FnlCrack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fnlfont" type="462c0819:PsiDirectoryNode" />
+              <item name="FreeType" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548707343779" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548840661871" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -145,6 +223,20 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="FnlCrack" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -168,8 +260,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28954422" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13605899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -178,15 +271,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2446959" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.53541076" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19688386" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38243628" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" visible="true" weight="0.3281471" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.23654391" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5013405" side_tool="true" weight="0.3281471" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -197,7 +290,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13605899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -206,15 +299,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32956153" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19688386" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38243628" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32956153" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.23654391" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5013405" side_tool="true" weight="0.3281471" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -241,13 +334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4288">
           <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/ByteTools/FnaInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -406,9 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/REC/test.bmp">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-152">
@@ -422,9 +505,46 @@
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/REC/test.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/ByteTools/FnaInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FreeType/FreeTypeLIb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="248" column="36" selection-start-line="248" selection-start-column="31" selection-end-line="248" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#FT_Glyph_Metrics#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_Bitmap_Size#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_CharMapRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_FaceRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#P_Face#0;class#FT_FaceRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="method#getFieldOrder#0;class#FT_FaceRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_Size_Metrics#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_SizeRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="method#getFieldOrder#0;class#FT_GlyphSlotRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_Bitmap#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_Outline#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_Vector#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_Generic#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_BBox#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_DriverRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_ModuleRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="class#FT_ListRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/ByteTools/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
+        <state relative-caret-position="479">
           <caret line="180" column="25" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -445,50 +565,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FreeType/FreeTypeLIb.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="376" column="19" selection-start-line="376" selection-start-column="19" selection-end-line="376" selection-end-column="19" />
+        <state relative-caret-position="209">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FontDataCompressed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#FT_Glyph_Metrics#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#FT_Bitmap_Size#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#FT_CharMapRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#P_Face#0;class#FT_FaceRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="method#getFieldOrder#0;class#FT_FaceRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#FT_Size_Metrics#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#FT_SizeRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#FT_GlyphSlotRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="method#getFieldOrder#0;class#FT_GlyphSlotRec#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#FT_Bitmap#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#FT_Outline#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#FT_Vector#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#FT_Generic#0;class#FreeType#0;class#FreeTypeLIb#0" />
-            <element signature="class#FT_BBox#0;class#FreeType#0;class#FreeTypeLIb#0" />
+            <element signature="method#getCompressedData#0;class#FontDataCompressed#0" />
+            <element signature="method#getOriginData#0;class#FontDataCompressed#0" />
+            <element signature="method#loadData#0;class#FontDataCompressed#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FontDataByType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="method#getBySizes#0;class#FontDataByType#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FontDatasBySize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="method#FontDatasBySize#0;class#FontDatasBySize#0" />
+            <element signature="method#setData#0;class#FontDatasBySize#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="323">
+          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="method#FreeTypeTest#0;class#Main#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cssxsh/fnlfont/FontPack/FnlFont.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
+        <state relative-caret-position="346">
+          <caret line="242" column="8" lean-forward="true" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="8" />
           <folding>
             <element signature="method#FnlFont#0;class#FnlFont#0" />
             <element signature="method#Load#0;class#FnlFont#0" />
-            <element signature="method#OutputBinFile#0;class#FnlFont#0" />
             <element signature="method#OutputBinFile#1;class#FnlFont#0" />
             <element signature="method#OutputBinFile#2;class#FnlFont#0" />
+            <element signature="method#OutInfo#0;class#FnlFont#0" />
             <element signature="method#getFontData#0;class#FnlFont#0" />
             <element signature="method#getDatasBySize#0;class#FnlFont#0" />
             <element signature="method#AnalyseTable#0;class#FnlFont#0" />

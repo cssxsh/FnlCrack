@@ -29,6 +29,10 @@ public class FontDatasBySize {
         return datas[index];
     }
 
+    public FontDataCompressed[] getDataAll (int index) {
+        return datas;
+    }
+
     public void setData (int index, int width, long address, long length) {
         datas[index] = new FontDataCompressed(width, BySize, address, length);
     }
