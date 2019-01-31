@@ -11,7 +11,8 @@ public class Main {
 
     private static void FnlFlieTest () {
         FnlFont rance01fnl = new FnlFont(".\\REC\\Rance01Font.fnl");
-        //rance01fnl.Load();
+        rance01fnl.Load();
+        rance01fnl.TransformTFF("D:\\Users\\CSSXSH\\Documents\\c_work\\FreeTypeTest\\simkai.ttf");
     }
 
     private static void FreeTypeTest () {

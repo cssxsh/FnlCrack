@@ -2,14 +2,12 @@ package cssxsh.fnlfont.FontPack;
 
 public class FontDatasBySize {
     private int BySize;
-    private long number;
     private long v;
     private FontDataCompressed[] datas;
 
     public FontDatasBySize(int size, long v, long number) {
         this.BySize = size;
         this.v = v;
-        this.number = number;
         this.datas = new FontDataCompressed[(int)number];
     }
 
@@ -18,7 +16,7 @@ public class FontDatasBySize {
     }
 
     public long getNumber () {
-        return number;
+        return datas.length;
     }
 
     public long getV () {

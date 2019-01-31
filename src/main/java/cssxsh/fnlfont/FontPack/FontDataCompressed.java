@@ -21,6 +21,13 @@ public class FontDataCompressed {
         this.compressedLength = length;
     }
 
+    public FontDataCompressed (int width, int height, long address, byte[] compressedData) {
+        this.width = width;
+        this.height = height;
+        this.address = address;
+        this.compressedData = compressedData;
+    }
+
     public int getWidth () {
         return width;
     }
@@ -38,11 +45,7 @@ public class FontDataCompressed {
     }
 
     public byte[] getCompressedData () {
-        if (isLoaded) {
-            return compressedData;
-        } else {
-            return null;
-        }
+        return compressedData;
     }
 
     public byte[] getOriginData () {

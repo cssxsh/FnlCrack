@@ -67,13 +67,13 @@ public class Tools {
     }
 
     public static int CharCodeToIndex (int CharCodeInt, String Code) {
-        Byte[] CharCode = new Byte[2];
-        CharCode[0] = (byte)(CharCodeInt / 0x0100);
-        CharCode[1] = (byte)(CharCodeInt % 0x0100);
+        short[] CharCode = new short[2];
+        CharCode[0] = (short)(CharCodeInt / 0x0100);
+        CharCode[1] = (short)(CharCodeInt % 0x0100);
         return CharCodeToIndex(CharCode, Code);
     }
 
-    public static int CharCodeToIndex (Byte[] CharCode, String Code) {
+    public static int CharCodeToIndex (short[] CharCode, String Code) {
         if (Code.equals("JIS")) {
             if (CharCode[0] == 0x00) {
                 if (CharCode[1] >= 0x20 && CharCode[1] <= 0x7E) {
@@ -96,13 +96,40 @@ public class Tools {
             }
         } else if (Code.equals("GBK")){
             // TODO: 之后确定修改方式后根据修改的结果构造
+            if (CharCode[0] == 0x00) {
+                if (CharCode[1] >= 0x20 && CharCode[1] <= 0x7E) {
+                    return CharCode[1] - 0x20;
+                }
+            } else if (CharCode[0] >= 0x81 && CharCode[0] <= 0xFE) {
+                if (CharCode[1] >= 0x40 && CharCode[1] <= 0x7E) {
+                    return CharCode[0] * 0xBE + CharCode[1] - 0x5F9F;
+                } else if (CharCode[1] >= 0x80 && CharCode[1] <= 0xFE) {
+                    return CharCode[0] * 0xBE + CharCode[1] - 0x5FA0;
+                }
+            }
         }
         return -1;
     }
 
     public static void OutputFile (String pathName, byte[] data) {
         try {
-            FileOutputStream file = new FileOutputStream(new File(pathName));
+            File file_ = new File(pathName);
+            if (!file_.getParentFile().isDirectory()) {
+                file_.getParentFile().mkdirs();
+            }
+            FileOutputStream file = new FileOutputStream(file_);
+            file.write(data);
+            file.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public static void OutputFile (String pathName, byte[] data, boolean append) {
+        try {
+            FileOutputStream file = new FileOutputStream(new File(pathName), append);
             file.write(data);
             file.close();
         } catch (FileNotFoundException e) {
@@ -122,9 +149,9 @@ public class Tools {
     }
 
     public static byte[] ShortToBytes (int s) {
-        byte[] bytes = new byte[4];
-        bytes[0] = (byte) (s & 0x00FF);
-        bytes[1] = (byte) (s & 0xFF00);
+        byte[] bytes = new byte[2];
+        bytes[0] = (byte) (s >> 0x00);
+        bytes[1] = (byte) (s >> 0x08);
         return bytes;
     }
 
@@ -214,7 +241,7 @@ public class Tools {
         System.arraycopy(biClrImportant, 0x00, result, 0x32, biClrImportant.length);
         if (isMONO) {
             // 0x0020 * 0x04 byte of RGBQUADs of paltte
-            byte[] paltte = new byte[] {0x00, 0x00, 0x00, 0x00, (byte)0xFF, (byte)0xFF, (byte)0xFF, 0x00};
+            byte[] paltte = new byte[] {0x00, 0x00, 0x00, 0x00,-0x01,-0x01,-0x01, 0x00};
             System.arraycopy(paltte, 0x00, result, 0x0036, paltte.length);
         } else {
             // 0x0100 * 0x04 byte of RGBQUADs of palette
@@ -231,5 +258,37 @@ public class Tools {
 
     public static byte[] PixelsToBmp (byte[] data, int width, int height, boolean isMONO) {
         return PixelsToBmp(data, width, height, isMONO, false);
+    }
+
+    public static byte[] PixelsCompleted (byte[] data, FreeType.FT_FaceRec.ByReference face, int height) {
+        int width = face.glyph.advance.x.intValue() / 64;
+        int dataWidth = (((width + 0x07) >> 3) + 3) & 0xFFFFFFFC;
+        byte[] result = new byte[dataWidth * height];
+        if (data == null || data.length == 0) {
+            return result;
+        }
+        int s = (height * face.ascender) / (face.ascender - face.descender) - face.glyph.bitmap_top;
+        for (int j = 0; j < face.glyph.bitmap.rows; j++) {
+            int i = face.glyph.bitmap_left;
+            int k;
+            int t;
+            for (int u = 0; u < face.glyph.bitmap.pitch; u++) {
+                byte row = data[j * face.glyph.bitmap.pitch + u];
+                for (int e = 0; e < 8; e++) {
+                    k = i / 8;
+                    t = i % 8;
+                    if ((height - j - 1 - s) * dataWidth + k >= result.length || (height - j - 1 - s) * dataWidth + k < 0) {
+                        u = face.glyph.bitmap.pitch;
+                        break;
+                    }
+                    int p = row & (0x80 >> e);
+                    p <<= e;
+                    result[(height - j - 1 - s) * dataWidth + k] |= (p >>> t);
+                    i++;
+                }
+            }
+        }
+
+        return result;
     }
 }

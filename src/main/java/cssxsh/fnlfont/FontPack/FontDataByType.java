@@ -17,13 +17,17 @@ public class FontDataByType {
         return BySizes.length;
     }
 
-    public FontDatasBySize getBySizes (int size) {
+    public FontDatasBySize getBySize (int size) {
         for (FontDatasBySize i : BySizes) {
             if (i.getSize() == size) {
                 return i;
             }
         }
         return null;
+    }
+
+    public void setBySize (int index, FontDatasBySize bySize) {
+        BySizes[index] = bySize;
     }
 
     public FontDatasBySize[] getBySizesAll () {
